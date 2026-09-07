@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +26,7 @@
     --ink3:#6b6b70;
     --accent:#a9d95f;            /* gardener lime */
     --accent-dk:#86b53f;
+    --accent-text:#a9d95f;
     --accent-ink:#0a0a0b;
     --green:#4ade80;
     --amber:#f0b429;
@@ -62,11 +63,11 @@
     padding:26px 22px 30px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
   .hero .bar{position:absolute;top:0;left:0;width:100%;height:6px;
     background:linear-gradient(90deg,var(--accent),var(--green));}
-  .hero .brand{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--accent);margin:10px 0 0;}
+  .hero .brand{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--accent-text);margin:10px 0 0;}
   .hero .brand .k{color:var(--ink2);opacity:.75;}
   .hero h1{font-size:39px;line-height:1.05;color:var(--ink);margin:16px 0 12px;}
   .hero h1 mark{background:var(--accent);color:var(--accent-ink);padding:0 9px;border-radius:8px;}
-  .hero .lead{font-size:15px;font-weight:600;color:#d6d6da;line-height:1.55;margin:0 0 18px;}
+  .hero .lead{font-size:15px;font-weight:600;color:var(--ink2);line-height:1.55;margin:0 0 18px;}
   .hero .pill{display:inline-flex;align-items:center;gap:7px;font-size:14px;
     color:var(--accent-ink);background:var(--accent);padding:9px 16px;border-radius:999px;
     box-shadow:0 4px 18px rgba(169,217,95,.25);}
@@ -97,7 +98,7 @@
     background:var(--pic);border-radius:12px;}
   .stepc .tx h3{margin:0 0 3px;font-size:17px;color:var(--ink);line-height:1.15;}
   .stepc .tx p{margin:0;font-size:12.5px;font-weight:600;color:var(--ink2);line-height:1.42;}
-  .stepc .tx em{font-style:normal;color:var(--accent);font-weight:800;}
+  .stepc .tx em{font-style:normal;color:var(--accent-text);font-weight:800;}
 
   /* ===== KAKAO CHAT (night) ===== */
   .chat-sec{background:linear-gradient(180deg,#12161b,#0f1216);padding:26px 22px 30px;
@@ -122,8 +123,8 @@
     border:none;border-radius:999px;padding:14px 30px;cursor:pointer;box-shadow:0 5px 0 var(--accent-dk);
     transition:transform .1s, box-shadow .1s;display:inline-flex;align-items:center;gap:9px;}
   .stampbtn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--accent-dk);}
-  .stampbtn.done{background:var(--card2);color:var(--accent);box-shadow:0 5px 0 #000;border:1px solid var(--accent);}
-  .stampmark{margin-top:16px;font-size:14px;font-weight:800;color:var(--accent);min-height:20px;}
+  .stampbtn.done{background:var(--card2);color:var(--accent-text);box-shadow:0 5px 0 #000;border:1px solid var(--accent);}
+  .stampmark{margin-top:16px;font-size:14px;font-weight:800;color:var(--accent-text);min-height:20px;}
 
   /* ===== RAIN ANIMATION ===== */
   .rain-layer{position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;}
@@ -142,13 +143,13 @@
   .infotile .em{font-size:24px;line-height:1;}
   .infotile h4{margin:9px 0 3px;font-size:15px;color:var(--ink);}
   .infotile p{margin:0;font-size:12.5px;font-weight:600;color:var(--ink3);line-height:1.45;}
-  .infotile b{color:var(--accent);font-weight:800;}
+  .infotile b{color:var(--accent-text);font-weight:800;}
   .carelist{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
   .carerow{display:flex;gap:12px;align-items:center;background:var(--card2);border:1px solid var(--line);
     border-radius:14px;padding:11px 14px;}
   .carerow .nm{flex:0 0 78px;font-size:14px;color:var(--ink);}
   .carerow .cd{font-size:12px;font-weight:600;color:var(--ink3);line-height:1.4;}
-  .carerow .cd b{color:var(--accent);font-weight:800;}
+  .carerow .cd b{color:var(--accent-text);font-weight:800;}
   .note{margin-top:14px;font-size:11.5px;font-weight:600;color:#cfe08f;line-height:1.5;
     background:rgba(169,217,95,.07);border:1px solid rgba(169,217,95,.22);border-radius:12px;padding:11px 13px;}
 
@@ -164,13 +165,30 @@
 
   /* ===== FOOTER ===== */
   footer{background:var(--bg);color:var(--ink);padding:28px 22px 34px;border-top:1px solid var(--line);}
-  footer .logo{font-size:15px;font-weight:900;color:var(--accent);letter-spacing:.02em;}
+  footer .logo{font-size:15px;font-weight:900;color:var(--accent-text);letter-spacing:.02em;}
   footer .msg2{font-size:14px;margin:12px 0 6px;color:var(--ink);}
   footer .fine{font-size:11.5px;color:var(--ink3);line-height:1.5;}
 
   /* poster illustration tiles */
   .pic{overflow:hidden;}
   .pic img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ===== LIGHT THEME ===== */
+  [data-theme="light"]{
+    --bg:#E7E4DA;--app:#FBFAF4;--card:#FFFFFF;--card2:#F3F1E8;--line:#E5E0D3;
+    --pic:#F4F3EF;--ink:#26251F;--ink2:#6B6558;--ink3:#9A927F;
+    --accent:#a9d95f;--accent-dk:#7fb23f;--accent-ink:#1c2b08;--accent-text:#5c8a28;
+  }
+  [data-theme="light"] .hero{background:
+    radial-gradient(120% 90% at 100% 0%, rgba(169,217,95,.30) 0%, transparent 46%),
+    linear-gradient(180deg,#FFFDF6 0%,#F1EFE4 100%);}
+  [data-theme="light"] .steps-sec{background:#EFEDE2;}
+  [data-theme="light"] .chat-sec{background:linear-gradient(180deg,#EAF1F6,#E2ECF2);}
+  [data-theme="light"] .msg .name{color:#5b6f80;}
+  .themebtn{position:absolute;top:14px;right:16px;z-index:5;width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:18px;line-height:1;
+    cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;}
+  .themebtn:hover{filter:brightness(1.06);}
 </style>
 
 </head>
@@ -180,6 +198,7 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="bar"></div>
+    <button class="themebtn" id="themebtn" type="button" aria-label="밝게/어둡게 전환">🌙</button>
     <p class="brand">AGIT GARDEN <span class="k">· 아식존 어린이집</span></p>
     <h1>오늘의<br><mark>아지뜰</mark> 미션</h1>
     <p class="lead">버섯과 해바라기를 함께 돌봐요!<br>매일 조금씩 자라는 모습을 지켜봐요.</p>
@@ -353,5 +372,21 @@
 
 </div>
 
+
+<script>
+  (function(){
+    var root=document.documentElement, KEY='ajiddeul_theme';
+    try{var s=localStorage.getItem(KEY); if(s) root.setAttribute('data-theme',s);}catch(e){}
+    var btn=document.getElementById('themebtn');
+    function sync(){var d=root.getAttribute('data-theme')||'light'; btn.textContent=(d==='light')?'🌙':'☀️';}
+    sync();
+    btn.addEventListener('click',function(){
+      var d=((root.getAttribute('data-theme')||'light')==='light')?'dark':'light';
+      root.setAttribute('data-theme',d);
+      try{localStorage.setItem(KEY,d);}catch(e){}
+      sync();
+    });
+  })();
+</script>
 </body>
 </html>
